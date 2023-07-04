@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+margin: 0;
+
+padding: 0;
+
+height: fit-content;
+box-sizing: border-box; font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+.derre{
+    margin-top: 14px;
+}
+
+body
+{
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+min-height: 100vh;
+
+background: #23242a
+}
+
+
+
+.word{
+    color:white;
+    text-decoration: none;
+}
+
+
+.links{
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+
+/*------Boton------*/
+.btn{
+    font-size: 15px;
+    margin-top: 23px;
+    margin-left: 130px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.culo{
+    color: #fefefe;
+    background-color: #1c1c1c;
+    
+}
+
+.btn-4::after{
+    
+margin-left: 166px; 
+margin-top: 400px;
+
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(93deg, rgb(4, 0, 255),rgb(118, 10, 207),rgb(206, 32, 250) ,rgb(43, 238, 25),rgb(25, 57, 238),rgb(54, 238, 245), rgb(113, 42, 245),rgb(113, 42, 245));
+    background-size: 300px;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.btn-4:hover::after{
+    background-position: 50px;
+    filter: blur(5px);
+}
+
+.btn-4::before{
+    margin-left: 166px;
+    margin-top: 400px;
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(49, 250, 60), rgb(49, 250, 60), rgb(49, 250, 60), rgb(49, 250, 60));
+    background-size: 300px;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.btn-4:hover::before{
+    background-position: 100%;
+}
+
+
+/*-------Boton-------*/
+
+
+
+
+/*----Animacion-----*/
+.box
+{
+position: relative;
+
+width: 391px;
+
+height: 450px; 
+background: #1c1c1c;
+
+border-radius: 3px;
+overflow:hidden;
+}
+
+.box::before
+{
+content: ' ';
+
+position: absolute;
+
+top: -50%;
+
+left: -50%;
+
+width: 470px;
+
+height: 470px; 
+
+background: linear-gradient(70deg, transparent, #ff0000,#e4f126,#ce20fa ,#2bee19,#1939ee,#36eef5, #712af5,#712af5);
+
+transform-origin: bottom right;
+
+animation: animate 5s linear infinite;
+
+animation-delay: -8.0s;
+
+}
+
+.box::after
+{
+content: ' ';
+
+position: absolute;
+
+top: -50%;
+
+left: -50%;
+
+width: 380px;
+
+height: 420px; 
+
+background: linear-gradient(0deg, transparent, 45f3FF , #2bee19);
+
+transform-origin: bottom right;
+
+animation: animate 5s linear infinite;
+animation-delay: -3s; 
+}
+
+
+
+@keyframes animate
+{ 
+ 0%
+  {
+  transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+
+/*----Animacion----*/
+
+
+.form{
+    position: relative;
+    inset: 2px;
+    border-radius: 3px;
+    background:#28292d;   
+    z-index: 1;
+    padding: 50px 40px;
+    display: flex;
+    width: 388px;
+    height: 446px;
+    flex-direction: column;
+
+}
+
+.form h2{
+    
+    color: #fa2020;
+    font-weight: 310;
+    text-align: center;
+    letter-spacing: o.1em;
+}
+
+.inputBoxInside{
+    color: aliceblue;
+}
+
+
+.inputBox{
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+    color: aliceblue;
+    
+}
+
+.linea{
+width: 160px;
+height: 1.7px;
+background-color: #e4f126;
+color:#51e923;
+
+    
+}
+
+.inputBox input{
+    position: relative;
+    width: 50%;
+    padding: 20px 10px 10px; 
+    background: transparent;
+    border: none;
+    outline: none;
+    color: 23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em; 
+    
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: 8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: 45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1000%;
+    height: 2px;
+    background: 45f3ff;
+
+}
